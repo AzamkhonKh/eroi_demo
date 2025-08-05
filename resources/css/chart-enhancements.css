@@ -1,0 +1,91 @@
+/* Enhanced Chart Styles */
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+}
+
+.chart-container canvas {
+    max-height: 400px !important;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Chart hover effects */
+.chart-container:hover canvas {
+    filter: brightness(1.05);
+}
+
+/* Custom tooltip styles */
+.chartjs-tooltip {
+    opacity: 1;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.chartjs-tooltip-key {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+    border-radius: 2px;
+}
+
+/* Dark theme compatibility */
+.dark .chart-container {
+    background: rgba(31, 41, 55, 0.5);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+/* Legend enhancements */
+.chart-container .chartjs-legend {
+    margin-top: 20px;
+}
+
+.chart-container .chartjs-legend li {
+    margin: 5px 10px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.chart-container .chartjs-legend li:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    cursor: pointer;
+}
+
+/* Animation styles */
+@keyframes chartFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.chart-container canvas {
+    animation: chartFadeIn 0.8s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .chart-container {
+        height: 300px;
+    }
+    
+    .chart-container canvas {
+        max-height: 300px !important;
+    }
+}
