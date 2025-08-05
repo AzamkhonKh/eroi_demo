@@ -54,7 +54,7 @@ This is a **admin panel application**. The application automatically redirects a
 
    ```bash
    git clone https://github.com/AzamkhonKh/eroi_demo.git
-   cd marketing-expenses
+   cd eroi_demo
    composer install
    ```
 
@@ -65,26 +65,19 @@ This is a **admin panel application**. The application automatically redirects a
    php artisan key:generate
    ```
 
-3. **Database setup**:
-
-   ```bash
-   touch database/database.sqlite  # For SQLite
-   php artisan migrate --seed
-   ```
-
-4. **Asset compilation**:
+3. **Asset compilation**:
 
    ```bash
    npm install && npm run build
    ```
 
-5. **Start development server**:
+4. **Start development server**:
 
    ```bash
    php artisan serve
    ```
 
-6. **Access the application**:
+5. **Access the application**:
    - Visit <http://localhost:8000> (redirects to admin)
    - Direct admin access: <http://localhost:8000/admin>
 
